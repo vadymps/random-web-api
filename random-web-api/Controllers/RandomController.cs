@@ -13,6 +13,7 @@ namespace random_web_api.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
         public IActionResult Get()
         {
             return Ok(new Random().Next().ToString()[..5]);

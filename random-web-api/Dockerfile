@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["random-web-api.csproj", "."]
-RUN dotnet restore "./random-web-api.csproj"
+COPY ["random-web-api/random-web-api.csproj", "random-web-api/"]
+RUN dotnet restore "random-web-api/random-web-api.csproj"
 COPY . .
-WORKDIR "/src/."
+WORKDIR "/src/random-web-api"
 RUN dotnet build "random-web-api.csproj" -c Release -o /app/build
 
 FROM build AS publish
