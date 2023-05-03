@@ -16,7 +16,7 @@ namespace random_web_api.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-	    // comment
+			// comment 2
             return Ok(new Random().Next().ToString()[..5]);
         }
     }
