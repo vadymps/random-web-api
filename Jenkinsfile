@@ -10,7 +10,10 @@ pipeline {
     
     stage("test") {
       steps {
-       echo "test" 
+       echo "test"
+       bat 'dotnet restore'
+       bat 'dotnet build'
+       bat 'dotnet test'
       }
     }
     
