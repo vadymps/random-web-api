@@ -4,7 +4,7 @@ pipeline {
   stages { 
     stage("build") {
       steps {
-       echo "build ngrok" 
+       echo "build ngrok 12" 
       }
     }
     
